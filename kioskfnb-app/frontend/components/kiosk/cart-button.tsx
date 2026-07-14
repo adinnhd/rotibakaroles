@@ -14,7 +14,7 @@ export function CartButton({ itemCount, onClick }: CartButtonProps) {
       variant="ghost"
       size="icon"
       onClick={onClick}
-      className="relative w-12 h-12 rounded-full bg-red-600 hover:bg-red-700 text-white"
+      className="relative w-12 h-12 rounded-full bg-primary hover:bg-blue-500 text-white"
     >
       <ShoppingCart className="w-6 h-6" />
       {itemCount > 0 && (
