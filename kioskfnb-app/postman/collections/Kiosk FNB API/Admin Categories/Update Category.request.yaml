@@ -1,0 +1,27 @@
+$kind: http-request
+name: Update Category
+url: "{{base_url}}/admin/categories/1"
+method: PUT
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "name": "Paket",
+      "slug": "paket",
+      "icon": "🎁",
+      "sort_order": 1,
+      "is_active": true
+    }
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+    language: text/javascript
+order: 1779347191003

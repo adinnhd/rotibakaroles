@@ -1,0 +1,23 @@
+$kind: http-request
+name: Get API Health
+url: "{{base_url}}/health"
+method: GET
+scripts:
+  - type: afterResponse
+    code: "pm.test(\"Status code is 200\", function () {\r
+
+      \    pm.response.to.have.status(200);\r
+
+      });\r
+
+      \r
+
+      pm.test(\"Response has status ok\", function () {\r
+
+      \    const jsonData = pm.response.json();\r
+
+      \    pm.expect(jsonData.data.status).to.eql(\"ok\");\r
+
+      });"
+    language: text/javascript
+order: 1779347189530

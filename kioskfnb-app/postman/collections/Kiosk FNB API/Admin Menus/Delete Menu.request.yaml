@@ -1,0 +1,15 @@
+$kind: http-request
+name: Delete Menu
+url: "{{base_url}}/admin/menus/1"
+method: DELETE
+headers:
+  - key: Accept
+    value: application/json
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+    language: text/javascript
+order: 1779347192006

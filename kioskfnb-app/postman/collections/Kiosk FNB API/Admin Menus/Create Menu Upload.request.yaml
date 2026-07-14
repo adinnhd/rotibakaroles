@@ -1,0 +1,48 @@
+$kind: http-request
+name: Create Menu Upload
+url: "{{base_url}}/admin/menus"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+body:
+  mode: formdata
+  formdata:
+    - key: menu_category_id
+      value: "1"
+      type: text
+    - key: name
+      value: "Paket Upload"
+      type: text
+    - key: slug
+      value: "paket-upload"
+      type: text
+    - key: description
+      value: "Menu contoh upload gambar"
+      type: text
+    - key: price
+      value: "25000"
+      type: text
+    - key: is_available
+      value: "1"
+      type: text
+    - key: is_recommended
+      value: "0"
+      type: text
+    - key: serving_min_people
+      value: "1"
+      type: text
+    - key: serving_max_people
+      value: "1"
+      type: text
+    - key: image
+      type: file
+      src: ""
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
+    language: text/javascript
+order: 1779347192003

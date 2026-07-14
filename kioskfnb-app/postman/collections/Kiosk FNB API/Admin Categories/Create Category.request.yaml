@@ -1,0 +1,32 @@
+$kind: http-request
+name: Create Category
+url: "{{base_url}}/admin/categories"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "name": "Coffee",
+      "slug": "coffee",
+      "icon": "☕",
+      "sort_order": 10,
+      "is_active": true
+    }
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
+
+      pm.test("Response has data property", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("data");
+      });
+    language: text/javascript
+order: 1779347191002

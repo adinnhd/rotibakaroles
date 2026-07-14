@@ -1,0 +1,45 @@
+# Backend
+backend/vendor
+backend/.env
+backend/storage/*.key
+backend/bootstrap/cache/*
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+!backend/public/uploads/menu-images/
+backend/public/uploads/menu-images/*
+!backend/public/uploads/menu-images/.gitkeep
+
+# Frontend
+frontend/node_modules
+frontend/.next
+frontend/.env.local
+
+# Logs
+*.log
+
+# AI experiments
+ai/**/.venv
+ai/**/venv
+ai/**/__pycache__
+ai/**/.pytest_cache
+ai/**/models/*
+!ai/**/models/.gitkeep
+ai/**/data/*
+!ai/**/data/.gitkeep
+ai/**/*.pt
+ai/**/*.pth
+ai/**/*.onnx
+ai/**/*.engine
+ai/**/*.tflite
+ai/**/*.weights
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Postman local workspace
+.postman/*
+!.postman/resources.yaml
+
+# Claude Code memory (local only)
+.claude/

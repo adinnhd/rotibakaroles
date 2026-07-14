@@ -1,0 +1,32 @@
+$kind: http-request
+name: Update Menu JSON
+url: "{{base_url}}/admin/menus/1"
+method: PUT
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "menu_category_id": 1,
+      "name": "Paket Hemat A",
+      "slug": "paket-hemat-a",
+      "description": "1 Burger + 1 Drink",
+      "price": 25000,
+      "image_url": "/images/burger-package.jpg",
+      "is_available": true,
+      "is_recommended": true,
+      "serving_min_people": 1,
+      "serving_max_people": 1
+    }
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+    language: text/javascript
+order: 1779347192004

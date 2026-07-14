@@ -1,0 +1,17 @@
+$kind: http-request
+name: Get Menu Detail
+url: "{{base_url}}/kiosk/menus/1"
+method: GET
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+
+      pm.test("Response has data property", function () {
+          const jsonData = pm.response.json();
+          pm.expect(jsonData).to.have.property("data");
+      });
+    language: text/javascript
+order: 1779347190006

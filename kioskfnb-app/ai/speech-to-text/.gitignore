@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
+*.pyo
+*.pyd
+samples/*.wav
+samples/*.mp3
+samples/*.m4a
+samples/*.ogg
+samples/*.webm
+samples/*.flac
+models/

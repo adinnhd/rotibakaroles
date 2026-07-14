@@ -1,0 +1,9 @@
+.env
+vendor
+node_modules
+storage/logs/*.log
+bootstrap/cache/*.php
+public/uploads/*
+!public/uploads/.gitkeep
+!public/uploads/menu-images
+!public/uploads/menu-images/.gitkeep

@@ -1,0 +1,15 @@
+$kind: http-request
+name: Delete Category
+url: "{{base_url}}/admin/categories/1"
+method: DELETE
+headers:
+  - key: Accept
+    value: application/json
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status is 200 or 422", function () {
+          pm.expect([200, 422]).to.include(pm.response.code);
+      });
+    language: text/javascript
+order: 1779347191004

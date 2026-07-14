@@ -1,0 +1,48 @@
+$kind: http-request
+name: Update Menu Upload
+url: "{{base_url}}/admin/menus/1"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+body:
+  mode: formdata
+  formdata:
+    - key: menu_category_id
+      value: "1"
+      type: text
+    - key: name
+      value: "Paket Hemat A"
+      type: text
+    - key: slug
+      value: "paket-hemat-a"
+      type: text
+    - key: description
+      value: "1 Burger + 1 Drink"
+      type: text
+    - key: price
+      value: "25000"
+      type: text
+    - key: is_available
+      value: "1"
+      type: text
+    - key: is_recommended
+      value: "1"
+      type: text
+    - key: serving_min_people
+      value: "1"
+      type: text
+    - key: serving_max_people
+      value: "1"
+      type: text
+    - key: image
+      type: file
+      src: ""
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 200", function () {
+          pm.response.to.have.status(200);
+      });
+    language: text/javascript
+order: 1779347192005

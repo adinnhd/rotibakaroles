@@ -1,0 +1,32 @@
+$kind: http-request
+name: Create Menu JSON
+url: "{{base_url}}/admin/menus"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+  - key: Content-Type
+    value: application/json
+body:
+  mode: raw
+  raw: |
+    {
+      "menu_category_id": 1,
+      "name": "Paket Demo",
+      "slug": "paket-demo",
+      "description": "Menu contoh dari Postman",
+      "price": 25000,
+      "image_url": "/images/burger-package.jpg",
+      "is_available": true,
+      "is_recommended": false,
+      "serving_min_people": 1,
+      "serving_max_people": 1
+    }
+scripts:
+  - type: afterResponse
+    code: |
+      pm.test("Status code is 201", function () {
+          pm.response.to.have.status(201);
+      });
+    language: text/javascript
+order: 1779347192002
