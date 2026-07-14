@@ -1,0 +1,6 @@
+[submodule "kiranapos/kiranapos-be"]
+	path = kiranapos/kiranapos-be
+	url = git@github.com:username/repo-be.git
+[submodule "kiranapos/kiranapos-fe"]
+	path = kiranapos/kiranapos-fe
+	url = git@github.com:username/repo-fe.git

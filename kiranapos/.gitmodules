@@ -1,0 +1,6 @@
+[submodule "kiranapos-be"]
+	path = kiranapos-be
+	url = git@github.com:adinnhd/repo-backend-kamu.git
+[submodule "kiranapos-fe"]
+	path = kiranapos-fe
+	url = git@github.com:adinnhd/repo-frontend-kamu.git
