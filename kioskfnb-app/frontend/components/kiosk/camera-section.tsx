@@ -384,7 +384,7 @@ export function CameraSection({
             type="button"
             variant="outline"
             onClick={restartDetection}
-            className="rounded-full border-red-200 bg-white text-red-600 shadow-sm hover:bg-red-50"
+            className="rounded-full border-primary/20 bg-white text-primary shadow-sm hover:bg-primary/5"
           >
             <RotateCcw className="h-4 w-4" />
             {TC.redetect}

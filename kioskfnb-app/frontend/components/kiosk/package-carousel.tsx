@@ -226,7 +226,7 @@ export function PackageCarousel({ peopleCount, onAddToCart, language = "id" }: P
 
   return (
     <div className="mt-6 px-4">
-      <h2 className="text-center text-2xl font-bold text-red-600 mb-4">
+      <h2 className="text-center text-2xl font-bold text-primary mb-4">
         {translations[language].packageCarousel.title}
       </h2>
 
@@ -234,7 +234,7 @@ export function PackageCarousel({ peopleCount, onAddToCart, language = "id" }: P
         {/* Left Arrow */}
         <button
           onClick={() => handleManualNavigation("prev")}
-          className="absolute left-0 z-10 w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center"
+          className="absolute left-0 z-10 w-10 h-10 rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg flex items-center justify-center"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -268,7 +268,7 @@ export function PackageCarousel({ peopleCount, onAddToCart, language = "id" }: P
 
                   <button
                     onClick={() => onAddToCart(currentPackage)}
-                    className="w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white flex items-center justify-center"
+                    className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center"
                   >
                     <Plus className="w-5 h-5" />
                   </button>
@@ -281,7 +281,7 @@ export function PackageCarousel({ peopleCount, onAddToCart, language = "id" }: P
         {/* Right Arrow */}
         <button
           onClick={() => handleManualNavigation("next")}
-          className="absolute right-0 z-10 w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white shadow-lg flex items-center justify-center"
+          className="absolute right-0 z-10 w-10 h-10 rounded-full bg-primary hover:bg-primary/90 text-white shadow-lg flex items-center justify-center"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -295,8 +295,8 @@ export function PackageCarousel({ peopleCount, onAddToCart, language = "id" }: P
             onClick={() => handleDotClick(index)}
             className={`w-2.5 h-2.5 rounded-full transition-all ${
               index === safeCurrentIndex
-                ? "bg-red-600 w-4"
-                : "bg-red-300"
+                ? "bg-primary w-4"
+                : "bg-primary/30"
             }`}
           />
         ))}

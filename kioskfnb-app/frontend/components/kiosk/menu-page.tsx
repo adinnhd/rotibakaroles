@@ -191,7 +191,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                 placeholder={TM.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-gray-100 border-0 focus-visible:ring-red-500"
+                className="pl-10 bg-gray-100 border-0 focus-visible:ring-primary"
               />
             </div>
 
@@ -220,7 +220,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                   className={cn(
                     "flex flex-col items-center gap-1 p-2 rounded-xl transition-all",
                     selectedCategory === category.id
-                      ? "bg-red-600 text-white"
+                      ? "bg-primary text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   )}
                 >
@@ -246,7 +246,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                   className={cn(
                     "px-3 py-1 rounded-full text-sm font-medium transition-all",
                     !selectedSubCategory
-                      ? "bg-red-600 text-white"
+                      ? "bg-primary text-white"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   )}
                 >
@@ -259,7 +259,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                     className={cn(
                       "px-3 py-1 rounded-full text-sm font-medium transition-all",
                       selectedSubCategory === sub
-                        ? "bg-red-600 text-white"
+                        ? "bg-primary text-white"
                         : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                     )}
                   >
@@ -323,7 +323,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                         <Button
                           size="icon"
                           onClick={() => openAddToCart(item)}
-                          className="w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white"
+                          className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 text-white"
                         >
                           <Plus className="w-4 h-4" />
                         </Button>
@@ -383,14 +383,14 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
                         onClick={() => setSelectedOptions((prev) => ({ ...prev, [group.id]: choice.id }))}
                         className={cn(
                           "flex items-center justify-between rounded-xl border px-4 py-3 text-left transition-all",
-                          isSelected ? "border-red-600 bg-red-50" : "border-gray-200 bg-white hover:border-gray-300"
+                          isSelected ? "border-primary bg-primary/5" : "border-gray-200 bg-white hover:border-gray-300"
                         )}
                       >
                         <span className="text-sm font-medium text-gray-900">{choice.label}</span>
                         {choice.priceDelta && choice.priceDelta > 0 ? (
-                          <span className="text-xs font-semibold text-red-600">+Rp. {formatPrice(choice.priceDelta)}</span>
+                          <span className="text-xs font-semibold text-primary">+Rp. {formatPrice(choice.priceDelta)}</span>
                         ) : (
-                          <Check className={cn("h-4 w-4", isSelected ? "text-red-600" : "text-transparent")} />
+                          <Check className={cn("h-4 w-4", isSelected ? "text-primary" : "text-transparent")} />
                         )}
                       </button>
                     )
@@ -404,7 +404,7 @@ export function MenuPage({ cartItems, onAddToCart, onUpdateQuantity, onRemoveIte
             <Button variant="outline" onClick={() => setOptionMenu(null)}>
               Batal
             </Button>
-            <Button onClick={handleConfirmOptions} className="bg-red-600 hover:bg-red-700 text-white">
+            <Button onClick={handleConfirmOptions} className="bg-primary hover:bg-primary/90 text-white">
               Tambah ke Keranjang
               {(() => {
                 if (!optionMenu || optionGroups.length === 0) return null;

@@ -92,10 +92,10 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
             <div className="flex flex-col md:flex-row gap-6 w-full max-w-2xl justify-center">
               <button
                 onClick={() => handleOrderTypeSelect("dine_in")}
-                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-red-500 hover:shadow-md transition-all group"
+                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-primary hover:shadow-md transition-all group"
               >
-                <div className="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                  <Store className="w-16 h-16 text-red-600" />
+                <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <Store className="w-16 h-16 text-primary" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{T.dineIn}</h3>
@@ -105,10 +105,10 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
 
               <button
                 onClick={() => handleOrderTypeSelect("take_away")}
-                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-red-500 hover:shadow-md transition-all group"
+                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-primary hover:shadow-md transition-all group"
               >
-                <div className="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                  <ShoppingBag className="w-16 h-16 text-red-600" />
+                <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <ShoppingBag className="w-16 h-16 text-primary" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{T.takeAway}</h3>
@@ -129,10 +129,10 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
             <div className="flex flex-col md:flex-row gap-6 w-full max-w-2xl justify-center animate-in fade-in slide-in-from-right-8 duration-300">
               <button
                 onClick={() => handleDeliverySelect("pickup")}
-                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-red-500 hover:shadow-md transition-all group"
+                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-primary hover:shadow-md transition-all group"
               >
-                <div className="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                  <ShoppingBag className="w-16 h-16 text-red-600" />
+                <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <ShoppingBag className="w-16 h-16 text-primary" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{T.pickup}</h3>
@@ -142,10 +142,10 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
 
               <button
                 onClick={() => handleDeliverySelect("delivered")}
-                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-red-500 hover:shadow-md transition-all group"
+                className="flex-1 flex flex-col items-center gap-4 bg-white p-8 rounded-3xl shadow-sm border-2 border-transparent hover:border-primary hover:shadow-md transition-all group"
               >
-                <div className="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-100 transition-colors">
-                  <UtensilsCrossed className="w-16 h-16 text-red-600" />
+                <div className="w-32 h-32 bg-primary/5 rounded-full flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                  <UtensilsCrossed className="w-16 h-16 text-primary" />
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-1">{T.delivered}</h3>
@@ -172,7 +172,7 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
                   <button
                     key={num}
                     onClick={() => handleNumpadPress(num.toString())}
-                    className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 text-2xl font-semibold text-gray-700 hover:bg-gray-50 hover:border-red-200 hover:text-red-600 transition-all active:scale-95"
+                    className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 text-2xl font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary/20 hover:text-primary transition-all active:scale-95"
                   >
                     {num}
                   </button>
@@ -180,13 +180,13 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
                 <div />
                 <button
                   onClick={() => handleNumpadPress("0")}
-                  className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 text-2xl font-semibold text-gray-700 hover:bg-gray-50 hover:border-red-200 hover:text-red-600 transition-all active:scale-95"
+                  className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 text-2xl font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary/20 hover:text-primary transition-all active:scale-95"
                 >
                   0
                 </button>
                 <button
                   onClick={handleNumpadDelete}
-                  className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-50 hover:border-red-200 hover:text-red-600 transition-all active:scale-95"
+                  className="h-16 rounded-2xl bg-white shadow-sm border border-gray-100 flex items-center justify-center text-gray-700 hover:bg-gray-50 hover:border-primary/20 hover:text-primary transition-all active:scale-95"
                 >
                   <Delete className="w-6 h-6" />
                 </button>
@@ -195,7 +195,7 @@ export function OrderTypePage({ onSelect, onBack, language = "id", onLanguageCha
               <Button
                 onClick={handleTableNumberSubmit}
                 disabled={!tableNumber}
-                className="w-full h-14 text-lg rounded-xl bg-red-600 hover:bg-red-700"
+                className="w-full h-14 text-lg rounded-xl bg-primary hover:bg-primary/90"
               >
                 {T.tableContinue}
               </Button>

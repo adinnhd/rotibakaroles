@@ -14,7 +14,7 @@ export function LanguageToggle({ language, onChange }: LanguageToggleProps) {
         onClick={() => onChange("id")}
         className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-all ${
           language === "id"
-            ? "bg-red-600 text-white shadow-sm"
+            ? "bg-primary text-white shadow-sm"
             : "text-gray-500 hover:text-gray-700"
         }`}
       >
@@ -24,7 +24,7 @@ export function LanguageToggle({ language, onChange }: LanguageToggleProps) {
         onClick={() => onChange("en")}
         className={`flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold transition-all ${
           language === "en"
-            ? "bg-red-600 text-white shadow-sm"
+            ? "bg-primary text-white shadow-sm"
             : "text-gray-500 hover:text-gray-700"
         }`}
       >
